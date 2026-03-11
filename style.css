@@ -1,0 +1,109 @@
+
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+.game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Press Start 2P", cursive;
+}
+
+#controls {
+  position: absolute;
+  bottom: 20px;
+  min-width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#controls div {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  gap: 10px;
+}
+
+#controls button {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border: 1px solid lightgray;
+  box-shadow: 3px 5px 0px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  outline: none;
+}
+
+#controls button:first-of-type {
+  grid-column: 1/-1;
+}
+
+#score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  font-size: 2em;
+  color: white;
+}
+
+#result-container {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+  }
+
+  button {
+    background-color: red;
+    padding: 20px 50px 20px 50px;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+  }
+}
+/* Watermark Design */
+.watermark {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.6;
+  text-shadow: 
+    2px 2px 0px #000,
+    4px 4px 0px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 9999;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+}
+
+/* Optional glow effect on hover (cool effect) */
+.watermark:hover {
+  opacity: 1;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #00ffcc,
+    0 0 20px #00ffcc;
+}
